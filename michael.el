@@ -18,3 +18,6 @@
 (global-set-key (kbd "C-y") 'clipboard-yank)
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+(setenv "PATH" (concat (getenv "PATH") ":/usr/local/git/bin"))
+(setq exec-path (append exec-path '("/usr/local/git/bin")))
