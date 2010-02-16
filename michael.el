@@ -21,3 +21,19 @@
 
 (setenv "PATH" (concat (getenv "PATH") ":/usr/local/git/bin"))
 (setq exec-path (append exec-path '("/usr/local/git/bin")))
+
+(setq initial-frame-alist '((width . 160) (height . 60)))
+
+;; Put autosave files (ie #foo#) in one place, *not*
+;; scattered all over the file system!
+(defvar autosave-dir
+  (concat "/tmp/emacs_autosaves/" (user-login-name) "/"))
+  (make-directory autosave-dir t)
+  (setq auto-save-file-name-transforms `(("\\(?:[^/]*/\\)*\\(.*\\)" ,(concat
+  autosave-dir "\\1") t)))
+
+;; Put backup files (ie foo~) in one place too. (The backup-directory-alist
+;; list contains regexp=>directory mappings; filenames matching a regexp are
+;; backed up in the corresponding directory. Emacs will mkdir it if necessary.)
+(defvar backup-dir (concat "/tmp/emacs_backups/" (user-login-name) "/"))
+(setq backup-directory-alist (list (cons "." backup-dir)))

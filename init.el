@@ -34,6 +34,6 @@
 (if (file-exists-p system-specific-config) (load system-specific-config))
 (if (file-exists-p user-specific-config) (load user-specific-config))
 
-(set-frame-size-according-to-resolution)
+;; (set-frame-size-according-to-resolution)
 
  ;; init.el end
