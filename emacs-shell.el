@@ -1,9 +1,9 @@
 ;; set emacs path
-(setq path "~/.rvm/ruby-1.8.7-p248/bin:/bin:/usr/local/bin:/usr/bin:/usr/sbin")
+(setq path "/Users/michael/.rvm/ruby-1.8.7-p248/bin:/bin:/usr/local/bin:/usr/bin:/usr/sbin")
 (setenv "PATH" path)
 (push "/usr/local/bin" exec-path)
-(setenv "GEM_PATH" "~/.rvm/gems/ruby-1.8.7-p248")
-(setenv "GEM_HOME" "~/.rvm/gems/ruby-1.8.7-p248")
+(setenv "GEM_PATH" "/Users/michael/.rvm/gems/ruby-1.8.7-p248")
+(setenv "GEM_HOME" "/Users/michael/.rvm/gems/ruby-1.8.7-p248")
 
 ;; autocomplete
 (setq eshell-cmpl-cycle-completions nil)
