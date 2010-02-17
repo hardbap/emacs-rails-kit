@@ -30,11 +30,5 @@
 (setq auto-mode-alist
    (cons '("\\.text" . markdown-mode) auto-mode-alist))
 
-;; Javascript (espresso)
-(autoload 'espresso-mode "espresso" nil t)
-(add-to-list 'auto-mode-alist '("\\.js$" . espresso-mode))
-(add-to-list 'auto-mode-alist '("\\.json$" . espresso-mode))
-(setq espresso-indent-level 2)
-
 ;; Cheat - for using cheat.errtheblog.com for some reference
 (require 'cheat)
