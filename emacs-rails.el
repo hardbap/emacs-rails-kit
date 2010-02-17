@@ -19,7 +19,7 @@
 (define-key rhtml-mode-map (kbd "M-s") 'save-buffer)
 
 ;; C-l inserts a hash mark
-(eval-after-load 'ruby-mode 
+(eval-after-load 'ruby-mode
   '(progn
      (define-key ruby-mode-map (kbd "C-l") " => ")))
 (eval-after-load 'rhtml-mode
@@ -28,12 +28,6 @@
 (eval-after-load 'rhtml-mode
   '(progn
      (define-key rhtml-mode-map (kbd "C->") 'rinari-insert-erb-skeleton)
-     (define-key rhtml-mode-map (kbd "C-M->") (lambda () 
-                                                (interactive) 
+     (define-key rhtml-mode-map (kbd "C-M->") (lambda ()
+                                                (interactive)
                                                 (rinari-insert-erb-skeleton 0)))))
-
-(require 'yasnippet)
-(yas/initialize)
-(yas/load-directory
- (concat (file-name-directory (or load-file-name buffer-file-name))
-   "vendor/yasnippets-rails/rails-snippets/"))
