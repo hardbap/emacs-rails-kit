@@ -43,6 +43,9 @@
 (require 'multi-term)
 (setq multi-term-program "/bin/bash")
 
+(require 'feature-mode)
+(add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
+
 (add-to-list 'load-path "~/.emacs.d/vendor/yasnippet")
 (require 'yasnippet)
 (yas/initialize)
