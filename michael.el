@@ -1,4 +1,4 @@
-;; (setq mac-command-modifier 'meta) ; set CMD key to Meta key
+(setq mac-command-modifier 'meta) ; set CMD key to Meta key
 
 (require 'frame-cmds)
 (global-set-key (kbd "C-M-<up>") 'shrink-frame)
@@ -53,3 +53,5 @@
 
 (autoload 'js2-mode "js2" nil t)
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+
+(add-to-list 'auto-mode-alist '("\\.less\\'" . css-mode))
