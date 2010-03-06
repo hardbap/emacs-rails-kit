@@ -1,4 +1,5 @@
 (setq mac-command-modifier 'meta) ; set CMD key to Meta key
+(setq mac-option-modifier 'super) ; sets the Option key as Super
 
 (require 'frame-cmds)
 (global-set-key (kbd "C-M-<up>") 'shrink-frame)
