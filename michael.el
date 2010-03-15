@@ -63,7 +63,7 @@
 ;; Better JS2 indentation from
 ;; http://mihai.bazon.net/projects/editing-javascript-with-emacs-js2-mode
 
-(autoload 'espresso-mode "espresso" nil t)
+(autoload 'espresso-mode "espresso")
 ;; (add-to-list 'auto-mode-alist '("\\.js$" . espresso-mode))
 ;; (add-to-list 'auto-mode-alist '("\\.json$" . espresso-mode))
 ;; (setq espresso-indent-level 2)
