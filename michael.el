@@ -57,9 +57,6 @@
 
 (add-to-list 'auto-mode-alist '("\\.less\\'" . css-mode))
 
-(add-to-list 'auto-mode-alist '("\\.rhtml\\'" . rhtml-mode))
-(add-to-list 'auto-mode-alist '("\\.builder\\'" . ruby-mode))
-
 ;; Better JS2 indentation from
 ;; http://mihai.bazon.net/projects/editing-javascript-with-emacs-js2-mode
 
