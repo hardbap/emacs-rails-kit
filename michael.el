@@ -40,6 +40,8 @@
 (defvar backup-dir (concat "/tmp/emacs_backups/" (user-login-name) "/"))
 (setq backup-directory-alist (list (cons "." backup-dir)))
 
+(require 'haml-mode)
+
 ;; use multi-term and tell it what shell to use
 (require 'multi-term)
 (setq multi-term-program "/bin/bash")
@@ -52,21 +54,26 @@
 (yas/initialize)
 (yas/load-directory "~/.emacs.d/vendor/yasnippet/snippets")
 
-(autoload 'js2-mode "js2" nil t)
-(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 
 (add-to-list 'auto-mode-alist '("\\.less\\'" . css-mode))
 
 (add-to-list 'auto-mode-alist '("\\.rhtml\\'" . rhtml-mode))
 (add-to-list 'auto-mode-alist '("\\.builder\\'" . ruby-mode))
 
+(add-to-list 'load-path "~/.emacs.d/vendor/gist.el")
+(require 'gist)
+
 ;; Better JS2 indentation from
 ;; http://mihai.bazon.net/projects/editing-javascript-with-emacs-js2-mode
 
-(autoload 'espresso-mode "espresso")
+(autoload 'espresso-mode "espresso" nil t)
 ;; (add-to-list 'auto-mode-alist '("\\.js$" . espresso-mode))
 ;; (add-to-list 'auto-mode-alist '("\\.json$" . espresso-mode))
 ;; (setq espresso-indent-level 2)
+
+(autoload 'js2-mode "js2" nil t)
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.json$" . js2-mode))
 
 (defun my-js2-indent-function ()
   (interactive)
@@ -126,7 +133,7 @@
                                    (delete-overlay ovl)) ovl)))))
 
 (defun my-js2-mode-hook ()
-  ;;(require 'espresso)
+;;  (require 'espresso)
   (setq espresso-indent-level 2
         indent-tabs-mode nil
         c-basic-offset 8)
