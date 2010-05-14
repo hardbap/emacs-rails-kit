@@ -1,0 +1,7 @@
+#name : context ... end
+# --
+context "$1" do
+  setup do
+    $0
+  end
+end
