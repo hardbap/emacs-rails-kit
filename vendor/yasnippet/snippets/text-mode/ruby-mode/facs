@@ -1,0 +1,3 @@
+#name : Factory.stub(:...)
+# --
+Factory.stub(:$1)$0

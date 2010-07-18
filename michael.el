@@ -40,6 +40,8 @@
 (defvar backup-dir (concat "/tmp/emacs_backups/" (user-login-name) "/"))
 (setq backup-directory-alist (list (cons "." backup-dir)))
 
+(add-to-list 'auto-mode-alist '("\.markdown" . markdown-mode))
+
 (require 'haml-mode)
 
 ;; use multi-term and tell it what shell to use
@@ -59,14 +61,21 @@
 
 (add-to-list 'auto-mode-alist '("\\.rhtml\\'" . rhtml-mode))
 (add-to-list 'auto-mode-alist '("\\.builder\\'" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.pill\\'" . ruby-mode))
 
 (add-to-list 'load-path "~/.emacs.d/vendor/gist.el")
 (require 'gist)
 
+(add-to-list 'load-path "~/.emacs.d/vendor/mustache-mode.el")
+(require 'mustache-mode)
+
+(add-to-list 'load-path "~/.emacs.d/vendor/coffee-mode")
+(require 'coffee-mode)
+
 ;; Better JS2 indentation from
 ;; http://mihai.bazon.net/projects/editing-javascript-with-emacs-js2-mode
 
-(autoload 'espresso-mode "espresso" nil t)
+;; (autoload 'espresso-mode "espresso" nil t)
 ;; (add-to-list 'auto-mode-alist '("\\.js$" . espresso-mode))
 ;; (add-to-list 'auto-mode-alist '("\\.json$" . espresso-mode))
 ;; (setq espresso-indent-level 2)
