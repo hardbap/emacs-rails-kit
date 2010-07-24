@@ -69,6 +69,8 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/mustache-mode.el")
 (require 'mustache-mode)
 
+(require 'rvm)
+
 (add-to-list 'load-path "~/.emacs.d/vendor/coffee-mode")
 (require 'coffee-mode)
 
