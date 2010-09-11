@@ -42,6 +42,8 @@
 
 (add-to-list 'auto-mode-alist '("\.markdown" . markdown-mode))
 
+(add-to-list 'auto-mode-alist '("\.erubis" . rhtml-mode))
+
 (require 'haml-mode)
 
 ;; use multi-term and tell it what shell to use
@@ -62,12 +64,10 @@
 (add-to-list 'auto-mode-alist '("\\.rhtml\\'" . rhtml-mode))
 (add-to-list 'auto-mode-alist '("\\.builder\\'" . ruby-mode))
 (add-to-list 'auto-mode-alist '("\\.pill\\'" . ruby-mode))
+(add-to-list 'auto-mode-alist '("\\.irbrc\\'" . ruby-mode))
 
 (add-to-list 'load-path "~/.emacs.d/vendor/gist.el")
 (require 'gist)
-
-(add-to-list 'load-path "~/.emacs.d/vendor/mustache-mode.el")
-(require 'mustache-mode)
 
 (require 'rvm)
 
