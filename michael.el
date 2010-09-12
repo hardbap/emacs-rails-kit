@@ -71,8 +71,8 @@
 
 (require 'rvm)
 
-(add-to-list 'load-path "~/.emacs.d/vendor/coffee-mode")
-(require 'coffee-mode)
+;; #(add-to-list 'load-path "~/.emacs.d/vendor/coffee-mode")
+;; (require 'coffee-mode)
 
 ;; Better JS2 indentation from
 ;; http://mihai.bazon.net/projects/editing-javascript-with-emacs-js2-mode
