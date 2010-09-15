@@ -1,3 +1,4 @@
+(server-start)
 (setq mac-command-modifier 'meta) ; set CMD key to Meta key
 (setq mac-option-modifier 'super) ; sets the Option key as Super
 
@@ -48,7 +49,7 @@
 
 ;; use multi-term and tell it what shell to use
 (require 'multi-term)
-(setq multi-term-program "/bin/bash")
+(setq multi-term-program "/usr/bin/login")
 
 (require 'feature-mode)
 (add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
