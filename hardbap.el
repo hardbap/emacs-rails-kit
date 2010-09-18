@@ -24,8 +24,8 @@
 (setenv "PATH" (concat (getenv "PATH") ":/usr/local/git/bin"))
 (setq exec-path (append exec-path '("/usr/local/git/bin")))
 
-;; set the initial fram size
-(setq initial-frame-alist '((width . 160) (height . 60)))
+;; set the initial frame size
+(setq initial-frame-alist '((width . 80) (height . 50)))
 
 ;; Put autosave files (ie #foo#) in one place, *not*
 ;; scattered all over the file system!
@@ -72,8 +72,8 @@
 
 (require 'rvm)
 
-;; #(add-to-list 'load-path "~/.emacs.d/vendor/coffee-mode")
-;; (require 'coffee-mode)
+(add-to-list 'load-path "~/.emacs.d/vendor/coffee-mode")
+(require 'coffee-mode)
 
 ;; Better JS2 indentation from
 ;; http://mihai.bazon.net/projects/editing-javascript-with-emacs-js2-mode
